@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   cacheComponents: true,
   partialPrefetching: true,
+  output: "export",
   turbopack: {
     rules: {
       "*.svg": {
