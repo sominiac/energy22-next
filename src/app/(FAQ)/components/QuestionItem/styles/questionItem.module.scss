@@ -1,0 +1,33 @@
+@use "@/styles/variables/colors.module.scss" as colors;
+
+.questionItem {
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 0.6px solid colors.$GRAY_BORDER;
+    backdrop-filter: blur(100px);
+    border-radius: 10px;
+    padding: 32px;
+    cursor: pointer;
+  }
+
+  &__titleText {
+    font-weight: 600;
+    line-height: 12px;
+    letter-spacing: -2.2%;
+  }
+
+  &__description {
+    display: flex;
+    background-color: rgba(77, 143, 240, 0.22);
+    border-radius: 10px;
+    margin-top: 16px;
+    padding: 32px;
+  }
+
+  &__descriptionText {
+    line-height: 11px;
+    letter-spacing: -2.2%;
+  }
+}

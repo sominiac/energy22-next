@@ -1,0 +1,51 @@
+@use "@/styles/variables/colors.module.scss" as color;
+
+:global(*), :global(*:after), :global(*:before) {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:global(button) {
+  width: fit-content;
+  height: fit-content;
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+:global(body) {
+  max-width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: color.$DARK_BLUE;
+}
+
+:global(body:has(dialog[open]:not(dialog[data-isnotification="true"]))) {
+  overflow: hidden;
+  padding-right: 15px;
+}
+
+:global(a) {
+  text-decoration: none;
+}
+
+@font-face {
+  font: {
+    family: "OpenSans";
+    style: normal;
+  }
+  src: url("/fonts/OpenSans/OpenSans-VariableFont_wdth,wght.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font: {
+    family: "NunitoSans";
+    style: normal;
+  }
+  src: url("/fonts/NunitoSans/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf")
+    format("truetype");
+}

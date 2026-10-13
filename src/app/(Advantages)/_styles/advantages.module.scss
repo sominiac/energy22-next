@@ -1,0 +1,67 @@
+@use "@/styles/variables/colors.module.scss" as colors;
+
+:global(.swiper-wrapper) {
+  left: -180px;
+}
+
+:global(.swiper-slide:not(.swiper-slide-active)::after) {
+  content: "";
+  width: 628px;
+  height: calc(100% - 2px);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+}
+
+:global(.swiper-pagination-bullets) {
+  display: flex;
+  justify-content: center;
+  column-gap: 8px;
+  margin-top: 32px;
+}
+
+:global(.swiper-pagination-bullet) {
+  width: 12px;
+  height: 12px;
+  background-color: colors.$GRAY_BLUE_TEXT;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+:global(.swiper-pagination-bullet-active) {
+  background-color: colors.$LIGHT_BLUE_TEXT;
+}
+
+.advantages {
+  margin-top: 144px;
+
+  &__inner {
+    position: relative;
+  }
+
+  &__swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__button {
+    background-color: colors.$LIGHT_BLUE_TEXT;
+    border-radius: 50%;
+    padding: 16px 18px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__buttonPrev {
+    padding-right: 24px;
+    left: calc(-32px - 54px);
+  }
+
+  &__buttonNext {
+    padding-left: 24px;
+    right: calc(-32px - 54px);
+  }
+}

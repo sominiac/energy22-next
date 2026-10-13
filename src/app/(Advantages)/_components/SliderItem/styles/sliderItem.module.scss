@@ -1,0 +1,31 @@
+@use "sass:color";
+@use "@/styles/variables/colors.module.scss" as variables;
+
+.sliderItem {
+  width: 630px;
+  display: flex;
+  align-items: center;
+  column-gap: 32px;
+  padding: 24px 32px;
+
+  border: 1px solid variables.$GRAY_BLUE_TEXT;
+  border-right-color: color.scale(variables.$GRAY_BLUE_TEXT, $lightness: -60%);
+  border-bottom-color: color.scale(variables.$GRAY_BLUE_TEXT, $lightness: -60%);
+  background-color: rgba(77, 94, 126, 0.03);
+  backdrop-filter: blur(10px);
+
+  border-radius: 20px;
+
+  &__reverse {
+    flex-direction: row-reverse;
+  }
+
+  &__image {
+    width: 263px;
+    height: 524px;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+  }
+}

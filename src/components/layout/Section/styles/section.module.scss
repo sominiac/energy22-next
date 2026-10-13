@@ -1,0 +1,32 @@
+@use "sass:color";
+@use "@/styles/variables/colors.module.scss" as colors;
+
+.section {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+
+  &__title {
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -2.2%;
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+  &__inner {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  &__innerWithBorder {
+    border: 1px solid colors.$GRAY_BLUE_TEXT;
+    border-right-color: color.scale(colors.$GRAY_BLUE_TEXT, $lightness: -60%);
+    border-bottom-color: color.scale(colors.$GRAY_BLUE_TEXT, $lightness: -60%);
+  }
+
+  &__innerWithBlur {
+    background-color: rgba(77, 94, 126, 0.03);
+    backdrop-filter: blur(70px);
+  }
+}

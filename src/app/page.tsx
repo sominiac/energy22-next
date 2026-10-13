@@ -1,69 +1,80 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+
+import NotificationProvider from "@/stores/providers/NotificationProvider";
+import Container from "@components/layout/Container";
+import Header from "@components/ui/Header";
+import Tags from "@components/ui/Tags";
+import UpButton from "@components/ui/UpButton";
+import Footer from "@components/ui/Footer";
+import NotificationModal from "@components/ui/NotificationModal";
+
+import Welcome from "@/app/(Welcome)";
+import About from "@/app/(About)";
+import Mission from "@/app/(Mission)";
+import Projects from "@/app/(Projects)";
+import Services from "@/app/(Services)";
+import Advantages from "@/app/(Advantages)";
+import Stages from "@/app/(Stages)";
+import Info from "@/app/(Info)";
+import FAQ from "@/app/(FAQ)";
+import SupFooter from "@/app/(SupFooter)";
+
+import styles from "./_styles/app.module.scss";
 
 export default function Home() {
+  const [isUpButtonVisible, setIsUpButtonVisible] = useState(false);
+
+  const arrowUpContainer = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const arrowUpContainerElem = arrowUpContainer?.current;
+    const onScroll = () => {
+      if (arrowUpContainerElem) {
+        if (
+          window.pageYOffset > arrowUpContainerElem.getBoundingClientRect().top
+        ) {
+          setIsUpButtonVisible(true);
+        } else {
+          setIsUpButtonVisible(false);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  });
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>
-            To get started, edit the{" "}
-            <code className={styles.code}>page.tsx</code> file.
-          </h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <NotificationProvider>
+      <Container>
+        <Header />
+        <Welcome />
+        <About />
+      </Container>
+      <Tags className={styles.app__tagsWrapper} />
+      <Container>
+        <Mission />
+      </Container>
+      <div ref={arrowUpContainer}>
+        {isUpButtonVisible && (
+          <div className={styles.app__arrowUpWrapper}>
+            <UpButton />
+          </div>
+        )}
+        <Container>
+          <Projects />
+          <Services />
+          <Advantages />
+          <Stages />
+          <Info />
+          <FAQ />
+        </Container>
+        <SupFooter />
+        <Footer />
+      </div>
+      <NotificationModal />
+    </NotificationProvider>
   );
 }

@@ -13,13 +13,19 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "incremental": true,
+    "erasableSyntaxOnly": false,
+    "baseUrl": "",
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@images/*": ["public/images/*"],
+      "@fonts/*": ["public/fonts/*"]
     }
   },
   "include": [

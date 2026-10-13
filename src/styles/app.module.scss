@@ -1,0 +1,15 @@
+.arrowUpWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 119px;
+  position: sticky;
+  bottom: 10px;
+  z-index: 100;
+}
+
+.tagsWrapper {
+  margin: 144px 0;
+  position: relative;
+  z-index: 1;
+}

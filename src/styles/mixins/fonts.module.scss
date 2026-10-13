@@ -1,0 +1,63 @@
+@mixin H1($family: ("OpenSans")) {
+  font: {
+    family: $family;
+    weight: 300;
+    size: 64px;
+  }
+}
+
+@mixin H2($family: ("OpenSans")) {
+  font: {
+    family: $family;
+    weight: 500;
+    size: 40px;
+  }
+}
+
+@mixin H3($family: ("OpenSans")) {
+  font: {
+    family: $family;
+    weight: 500;
+    size: 32px;
+  }
+}
+
+@mixin H4($family: ("OpenSans")) {
+  font: {
+    family: $family;
+    weight: 500;
+    size: 24px;
+  }
+}
+
+@mixin text1($family: ("OpenSans")) {
+  font: {
+    family: $family;
+    weight: 400;
+    size: 24px;
+  }
+}
+
+@mixin text2($family: ("OpenSans")) {
+  font: {
+    family: $family;
+    weight: 400;
+    size: 20px;
+  }
+}
+
+@mixin text4($family: ("OpenSans")) {
+  font: {
+    family: $family;
+    weight: 400;
+    size: 16px;
+  }
+}
+
+@mixin text5($family: ("OpenSans")) {
+  font: {
+    family: $family;
+    weight: 700;
+    size: 16px;
+  }
+}

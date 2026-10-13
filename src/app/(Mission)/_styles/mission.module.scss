@@ -1,0 +1,58 @@
+@use "@/styles/mixins/fonts.module.scss" as fonts;
+@use "@/styles/variables/colors.module.scss" as variables;
+
+.mission {
+  position: relative;
+  z-index: 0;
+
+  &:before {
+    content: url("/images/mission-bg.png");
+    position: absolute;
+    top: -570px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  &__inner {
+    padding: 109px 0 142px 113px;
+    position: relative;
+  }
+
+  &__inner:before {
+    content: url("/images/mission-bg1.png");
+    position: absolute;
+    top: -140px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  &__inner *:nth-child(2) {
+    margin: 66px 0 0 418px;
+  }
+
+  &__inner *:nth-child(3) {
+    margin: 24px 0 0 530px;
+  }
+
+  &__inner *:nth-child(4) {
+    margin: 40px 0 0 788px;
+  }
+
+  &__inner *:nth-child(5) {
+    margin: 8px 0 0 676px;
+  }
+
+  &__title {
+    @include fonts.H1("NunitoSans");
+    line-height: 150%;
+    letter-spacing: -2.2%;
+  }
+
+  &__text {
+    line-height: 150%;
+    letter-spacing: -2.2%;
+    color: variables.$GRAY_TEXT;
+  }
+}

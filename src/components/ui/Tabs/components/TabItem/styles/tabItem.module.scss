@@ -1,0 +1,7 @@
+@use "@/styles/variables/colors.module.scss" as variables;
+
+.tabItem {
+  line-height: 14px;
+  color: variables.$GRAY_TEXT;
+  cursor: pointer;
+}

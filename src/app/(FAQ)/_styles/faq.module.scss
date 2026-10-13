@@ -1,0 +1,18 @@
+.faq {
+  margin-top: 144px;
+  position: relative;
+
+  &:after {
+    content: url("/images/faq-bg.png");
+    position: absolute;
+    top: -100px;
+    left: -400px;
+    z-index: -1;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+  }
+}

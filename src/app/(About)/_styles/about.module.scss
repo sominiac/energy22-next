@@ -1,0 +1,55 @@
+.about {
+  margin-top: 144px;
+
+  &__inner {
+    padding: 96px 113px;
+    position: relative;
+  }
+
+  &__inner:before {
+    content: url("/images/about-bg3.png");
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+  &__innerImage {
+    position: absolute;
+    top: 104px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__imageLines {
+    width: 432px;
+    height: 270px;
+  }
+
+  &__list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 310px 2fr 310px;
+    grid-template-rows: 104px 44px 44px;
+    grid-row-gap: 56px;
+    list-style: none;
+  }
+
+  &__list li:nth-child(2) span, &__list li:nth-child(5) span {
+    line-height: 22px;
+  }
+
+  &__listLeftItem {
+    grid-column-start: 1;
+  }
+
+  &__listRightItem {
+    grid-column-start: 3;
+  }
+
+  &__itemText {
+    letter-spacing: -2.2%;
+    line-height: 130%;
+  }
+}

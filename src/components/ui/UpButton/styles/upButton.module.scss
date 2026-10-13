@@ -1,0 +1,17 @@
+@use "@/styles/variables/colors.module.scss" as colors;
+
+.upButton {
+  padding: 18px 22px 18px 23px;
+  border-radius: 10px;
+  border: 1px solid colors.$GRAY_BORDER;
+  backdrop-filter: blur(41px);
+  background-color: rgba(77, 94, 126, 0.48);
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+
+  & img {
+    width: 17px;
+    height: 26px;
+  }
+}

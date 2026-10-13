@@ -1,0 +1,9 @@
+@use "@/styles/variables/colors.module.scss" as colors;
+
+.notificationModal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

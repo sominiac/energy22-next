@@ -1,0 +1,71 @@
+@use "@/styles/variables/colors.module.scss" as color;
+
+$tabs-list: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+
+.services {
+  //@TODO добавить глобальную переменную для одинакового секционного отступа
+  margin-top: 144px;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: url("/images/services-bg.png");
+    position: absolute;
+    top: -130px;
+    left: -520px;
+    z-index: -1;
+  }
+
+  &__inner {
+    //@TODO добавить глобальную переменную для одинакового секционного отступа
+    padding: 96px 81px;
+    backdrop-filter: blur(50px);
+  }
+
+  &__header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__tabItem {
+    line-height: 17px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px 32px;
+    margin-top: 56px;
+    list-style: none;
+  }
+
+  &__listItem {
+    padding: 24px 16px;
+    background-color: color.$LIGHT_BLUE_TEXT;
+    border-radius: 16px;
+    animation: list-item-show 0.1s ease-in;
+  }
+
+  @each $item in $tabs-list {
+    &__listItem:nth-child(#{$item}) {
+      animation-duration: calc(0.1s + #{$item}s / 10);
+    }
+  }
+
+  &__itemText {
+    line-height: 150%;
+    letter-spacing: -2.2%;
+  }
+}
+
+@keyframes list-item-show {
+  from {
+    opacity: 0.4;
+    transform: translateX(5%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}

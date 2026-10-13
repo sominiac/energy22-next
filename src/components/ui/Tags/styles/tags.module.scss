@@ -1,0 +1,12 @@
+.tags {
+  :global(.slick-slide) {
+    margin-right: 48px;
+  }
+
+  &__item {
+    width: fit-content;
+    padding: 24px;
+    border: 2px solid #fbfaff5c;
+    border-radius: 10px;
+  }
+}

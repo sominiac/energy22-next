@@ -1,0 +1,45 @@
+.stages {
+  margin-top: 144px;
+
+  &__inner {
+    margin-top: 56px;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("/images/stages-bg.png");
+    background-position-y: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    gap: 184px 144px;
+    padding-left: 40px;
+  }
+
+  &__content > :nth-child(1) {
+    width: 204px;
+  }
+
+  &__content > :nth-child(2),
+  &__content > :nth-child(3) {
+    width: 205px;
+  }
+
+  &__content > :nth-child(4) {
+    width: 158px;
+  }
+
+  &__content > :nth-child(5) {
+    width: 258px;
+  }
+
+  &__content > :nth-child(6) {
+    width: 210px;
+  }
+
+  &__content > :nth-child(7) {
+    width: 160px;
+  }
+}
