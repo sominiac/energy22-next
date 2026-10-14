@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
   cacheComponents: false,
   partialPrefetching: false,
   output: "export",
+  trailingSlash: true,
   images: { unoptimized: true },
   turbopack: {
     rules: {

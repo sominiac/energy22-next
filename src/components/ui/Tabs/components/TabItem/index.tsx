@@ -1,5 +1,4 @@
 import clsx from "clsx";
-import Link from "next/link";
 import Text from "@components/ui/Text";
 
 import type { TTabComponentProps } from "@components/ui/Tabs";
@@ -37,13 +36,13 @@ const TabItem = ({
 
   if (isNavItem) {
     return (
-      <Link href={`/#${sectionId}`}>
+      <a href={`/#${sectionId}`}>
         <TextComponent
           className={className}
           text={text}
           onClick={() => onTabClick(sectionId)}
         />
-      </Link>
+      </a>
     );
   }
 
