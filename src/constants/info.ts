@@ -1,3 +1,5 @@
+export const PROJECT_PATH: string = "/energy22-next";
+
 export const TITLE: string = "Energy22";
 export const DESCRIPTION: string =
   "Услуги профессионального электрика в Барнауле";

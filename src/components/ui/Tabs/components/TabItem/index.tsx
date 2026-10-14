@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import Text from "@components/ui/Text";
 
+import { basePath } from "../../../../../../next.config";
 import type { TTabComponentProps } from "@components/ui/Tabs";
 
 import styles from "./styles/tabItem.module.scss";
@@ -36,7 +37,7 @@ const TabItem = ({
 
   if (isNavItem) {
     return (
-      <a href={`/#${sectionId}`}>
+      <a href={`${basePath}/#${sectionId}`}>
         <TextComponent
           className={className}
           text={text}

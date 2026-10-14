@@ -1,8 +1,10 @@
 import path from "node:path";
+
+import { PROJECT_PATH } from "@/constants/info";
 import type { NextConfig } from "next";
 
 const isDev: boolean = process.env.NODE_ENV === "development";
-const basePath: string = isDev ? "" : "/energy22-next";
+export const basePath: string = isDev ? "" : PROJECT_PATH;
 
 const nextConfig: NextConfig = {
   /* config options here */
