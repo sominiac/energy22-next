@@ -7,7 +7,7 @@
   }
 
   &__inner:before {
-    content: url("/images/about-bg3.png");
+    content: url("#{$basePath}/images/about-bg3.png");
     position: absolute;
     top: 50%;
     left: 50%;

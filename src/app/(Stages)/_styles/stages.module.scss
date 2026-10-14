@@ -10,7 +10,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    background-image: url("/images/stages-bg.png");
+    background-image: url("#{$basePath}/images/stages-bg.png");
     background-position-y: 40px;
     background-size: contain;
     background-repeat: no-repeat;

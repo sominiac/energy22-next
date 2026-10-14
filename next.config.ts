@@ -1,9 +1,12 @@
 import path from "node:path";
 import type { NextConfig } from "next";
 
+const isDev: boolean = process.env.NODE_ENV === "development";
+const basePath: string = isDev ? "" : "/energy22-next";
+
 const nextConfig: NextConfig = {
   /* config options here */
-  basePath: "/energy22-next",
+  basePath,
   cacheComponents: false,
   partialPrefetching: false,
   output: "export",
@@ -18,6 +21,9 @@ const nextConfig: NextConfig = {
     resolveAlias: {
       "@": path.resolve(__dirname, "src"),
     },
+  },
+  sassOptions: {
+    additionalData: `$basePath: "${basePath}";`,
   },
 };
 

@@ -10,7 +10,7 @@
   position: relative;
 
   &:after {
-    content: url("/images/footer-bg.png");
+    content: url("#{$basePath}/images/footer-bg.png");
     position: absolute;
     top: -200px;
     left: -450px;

@@ -6,7 +6,7 @@
   z-index: 0;
 
   &:before {
-    content: url("/images/mission-bg.png");
+    content: url("#{$basePath}/images/mission-bg.png");
     position: absolute;
     top: -570px;
     left: 50%;
@@ -20,7 +20,7 @@
   }
 
   &__inner:before {
-    content: url("/images/mission-bg1.png");
+    content: url("#{$basePath}/images/mission-bg1.png");
     position: absolute;
     top: -140px;
     left: 50%;
